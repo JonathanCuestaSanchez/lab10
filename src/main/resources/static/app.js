@@ -1,6 +1,7 @@
 var app = (function () {
 
     class Point{
+        var id=$('#ID').val();
         constructor(x,y){
             this.x=x;
             this.y=y;
@@ -31,14 +32,14 @@ var app = (function () {
     };
 
 
-    var connectAndSubscribe = function () {
+    var connectAndSubscribe = function (ID) {
         console.info('Connecting to WS...');
         var socket = new SockJS('/stompendpoint');
         stompClient = Stomp.over(socket);        
         //subscribe to /topic/TOPICXX when connections succeed
         stompClient.connect({}, function (frame) {
             console.log('Connected: ' + frame);
-            stompClient.subscribe('/topic/newpoint', function (eventbody) {
+            stompClient.subscribe('/topic/newpoint.'+ID, function (eventbody) {
             var s=JSON.parse(eventbody.body);
             addPointToCanvas({x:s.x,y:s.y});
            
@@ -57,8 +58,11 @@ var app = (function () {
         init: function () {
             var can = document.getElementById("canvas");
             
-            //websocket connection
-            connectAndSubscribe();
+            
+            
+        },
+        suscrito: function(){
+            connectAndSubscribe(id);
         },
 
         publishPoint: function(px,py){
