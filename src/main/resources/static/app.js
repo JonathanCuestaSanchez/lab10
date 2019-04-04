@@ -1,7 +1,7 @@
 var app = (function () {
 
     class Point{
-        var id=$('#ID').val();
+        
         constructor(x,y){
             this.x=x;
             this.y=y;
@@ -61,8 +61,8 @@ var app = (function () {
             
             
         },
-        suscrito: function(){
-            connectAndSubscribe(id);
+        suscrito: function(ID){
+            connectAndSubscribe(ID);
         },
 
         publishPoint: function(px,py){
