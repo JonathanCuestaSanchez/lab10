@@ -149,7 +149,7 @@ Para ver cómo manejar esto desde el manejador de eventos STOMP del servidor, re
 2. Vimos si este funcionaba entrando a la ip 192.68.73.3:8161/admin.
 3. Verificamos que la aplicacion funcionara en ambas maquinas.
 4. Creamos el archivo "Config.conf" en uno de los servidores.
-5.Ejecutmos el archivo NGINX, y cambiamos el archivo :
+5. Ejecutmos el archivo NGINX, y cambiamos el archivo :
 
 ![](https://github.com/JonathanCuestaSanchez/lab10/blob/master/config.png)
 
