@@ -151,4 +151,6 @@ Para ver cómo manejar esto desde el manejador de eventos STOMP del servidor, re
 4. Creamos el archivo "Config.conf" en uno de los servidores.
 5.Ejecutmos el archivo NGINX, y cambiamos el archivo :
 
+![](https://github.com/JonathanCuestaSanchez/lab10/blob/master/config.png)
+
 6. Creamos una cuenta en Lemur, modificamos la aplicacion, ahora se conecta al servidor creado en Lemur.
