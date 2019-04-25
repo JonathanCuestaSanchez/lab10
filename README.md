@@ -142,3 +142,13 @@ Para ver cómo manejar esto desde el manejador de eventos STOMP del servidor, re
 3. La aplicación propaga correctamente el evento de creación del polígono, cuando colaborativamente se insertan cuatro puntos.
 4. La aplicación propaga correctamente el evento de creación del polígono, cuando colaborativamente se insertan cuatro puntos, con 2 o más dibujos simultáneamente.
 5. En la implementación se tuvo en cuenta la naturaleza concurrente del ejercicio. Por ejemplo, si se mantiene el conjunto de los puntos recibidos en una colección, la misma debería ser de tipo concurrente (thread-safe).
+
+### Pasos: 
+
+1. En las maquinas virtuales activamos el ActiveMQ.
+2. Vimos si este funcionaba entrando a la ip 192.68.73.3:8161/admin.
+3. Verificamos que la aplicacion funcionara en ambas maquinas.
+4. Creamos el archivo "Config.conf" en uno de los servidores.
+5.Ejecutmos el archivo NGINX, y cambiamos el archivo :
+
+6. Creamos una cuenta en Lemur, modificamos la aplicacion, ahora se conecta al servidor creado en Lemur.
